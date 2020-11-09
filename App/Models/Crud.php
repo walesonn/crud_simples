@@ -4,7 +4,8 @@ namespace App\Models;
 
 interface Crud {
     
-    public function create(Contato $contato);
+    public function create(Contact $contact );
     public static function read();
-    public function update( Contato $contato);
+    public function update( Contact $contact );
+    public function delete( Contact $contact );
 }

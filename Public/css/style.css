@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+html,
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+h1,
+h2 {
+  color: grey; }
+
+.mt-1 {
+  margin-top: 10px; }
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center; }
+  header img {
+    margin: 0 auto;
+    animation-name: imgmove;
+    animation-duration: 2s; }
+
+fieldset {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around; }
+
+input {
+  display: inline-flex;
+  height: 30px;
+  border-radius: 10px;
+  border: 0.3px dashed grey;
+  background-color: white;
+  outline: none;
+  font-style: italic;
+  text-align: center; }
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  border: 0.3px solid grey;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  animation-name: tablemove;
+  animation-duration: 2s; }
+  table thead {
+    background-color: whitesmoke;
+    text-align: center; }
+  table tbody {
+    text-align: center; }
+    table tbody td:nth-child(3) {
+      text-align: start; }
+    table tbody td:nth-child(2) {
+      text-align: start; }
+  table tr:nth-last-child(even) {
+    background-color: whitesmoke; }
+
+.btn {
+  background-color: #39c3ef;
+  border: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+  color: white; }
+
+.btn-success {
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 3px; }
+  .btn-success:hover {
+    background-color: green;
+    color: white; }
+
+.btn-orange {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 3px; }
+  .btn-orange:hover {
+    background-color: yellowgreen;
+    color: white; }
+
+.btn-danger {
+  background-color: red;
+  padding: 10px;
+  border-radius: 3px; }
+  .btn-danger:hover {
+    background-color: purple;
+    color: white; }
+
+@keyframes tablemove {
+  0% {
+    margin-left: -450px; }
+  100% {
+    margin-left: 69px; } }
+@keyframes imgmove {
+  0% {
+    margin-right: 0px; }
+  100% {
+    margin-right: 40%; } }
+#rsp {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Models\Crud;
 
-class Contato implements Crud {
+class Contact implements Crud {
 
     private $id;
     private $nome;
@@ -20,7 +20,7 @@ class Contato implements Crud {
     }
 
     //Responsavel por inserir um objeto do tipo contato no banco de dados
-    public function create( Contato $contato )
+    public function create( Contact $contato )
     {
         $sql = "INSERT INTO contatos ( nome, email, tel )";
         $sql .= "VALUES ( :nome, :email, :tel )";
@@ -31,12 +31,7 @@ class Contato implements Crud {
             $cmd->bindValue( ":nome", $contato->getNome() );
             $cmd->bindValue( ":email", $contato->getEmail() );
             $cmd->bindValue( ":tel", $contato->getTel() );
-            
-            if( $cmd->execute() )
-            {
-                return true;
-            }
-            return false;
+            return $cmd->execute()? true : false;
         }
         catch(\Exception $e)
         {
@@ -59,7 +54,7 @@ class Contato implements Crud {
                 {
                     $result = $cmd->fetch(\PDO::FETCH_OBJ);
                     //retornará um contato
-                    return new Contato( $result->nome, $result->email, $result->tel, $result->id );
+                    return new Contact( $result->nome, $result->email, $result->tel, $result->id );
                 }
                 return false;
             }
@@ -79,7 +74,7 @@ class Contato implements Crud {
 
                 foreach( $result as $contato )
                 {
-                    $lista[] = new Contato( $contato->nome, $contato->email, $contato->tel,$contato->id );
+                    $lista[] = new Contact( $contato->nome, $contato->email, $contato->tel,$contato->id );
                 }
                 //retornara um array de contatos
                 return $lista;
@@ -92,7 +87,7 @@ class Contato implements Crud {
         }
     }
 
-    public function update( Contato $contato )
+    public function update( Contact $contato )
     {
         $sql = "UPDATE contatos SET nome = :n, email = :e, tel = :t WHERE id = :id";
         try
@@ -102,12 +97,22 @@ class Contato implements Crud {
             $cmd->bindValue( ":e", $contato->getEmail() );
             $cmd->bindValue( ":t", $contato->getTel() );
             $cmd->bindValue( ":id", $contato->getId() );
-            
-            if( $cmd->execute() )
-            {
-                return true;
-            }
-            return false;
+            return $cmd->execute()? true : false;
+        }
+        catch(\Exception $e)
+        {
+            return $e->getMessage();
+        }
+    }
+
+    public function delete( Contact $contato)
+    {
+        $sql = "DELETE FROM contatos WHERE id = :id";
+        try
+        {
+            $cmd = Connection::connect()->prepare( $sql );
+            $cmd->bindValue( ":id", $contato->getId() );
+            return $cmd->execute()? true : false;
         }
         catch(\Exception $e)
         {
