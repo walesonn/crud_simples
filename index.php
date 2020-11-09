@@ -20,6 +20,15 @@ switch($page)
     case "cadastro":
         $controller->cadastro();
     break;
+    case "visualizar":
+        $controller->visualizar();
+    break;
+    case "editar":
+        $controller->editar();
+    break;
+    case "delete":
+        $controller->delete();
+    break;
     default:
         echo "<h1 style='color: red; text-align: center;'>ERROR HTTP 404 PAGE NOT FOUND</h1>";
     break;

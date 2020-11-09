@@ -50,7 +50,8 @@ class Contact implements Crud {
             {
                 $cmd = Connection::connect()->prepare( $sql );
                 $cmd->bindValue( ":id", $id );
-                if( $cmd->execute() )
+                $cmd->execute();
+                if( $cmd->rowCount() > 0 )
                 {
                     $result = $cmd->fetch(\PDO::FETCH_OBJ);
                     //retornará um contato
@@ -79,7 +80,7 @@ class Contact implements Crud {
                 //retornara um array de contatos
                 return $lista;
             }
-            
+            return []; //caso não haja nenhum contato salvo retornaremos um array vazio
         }
         catch(\Exception $e)
         {
