@@ -5,5 +5,5 @@
 */
 
 define("DB_HOST","mysql:host=localhost;dbname=crud_simples");
-define("USER_DB","Seu usuario aqui"); //adicione o seu usuário do banco de dados mysql aqui
-define("PWD","Sua senha aqui");  //adicione a sua senha do mysql aqui
+define("USER_DB","root"); //adicione o seu usuário do banco de dados mysql aqui
+define("PWD","");  //adicione a sua senha do mysql aqui
