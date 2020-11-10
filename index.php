@@ -4,8 +4,6 @@ require  __DIR__."/vendor/autoload.php";
 require __DIR__."/Conf/paths.php";
 require __DIR__."/Conf/database.php";
 
-session_start();
-
 use App\Controllers\HomeController;
 use App\Models\Contact;
 
@@ -30,7 +28,7 @@ switch($page)
         $controller->delete();
     break;
     default:
-        echo "<h1 style='color: red; text-align: center;'>ERROR HTTP 404 PAGE NOT FOUND</h1>";
+        echo "<h1 style='color: grey; text-align: center;'>ERROR HTTP 404 PAGE NOT FOUND</h1>";
     break;
 }
 
