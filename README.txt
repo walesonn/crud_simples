@@ -35,7 +35,7 @@ REQUISITOS:
    -- sudo apt install git -y
 
 10. Agora entre na pasta onde você irá clonar o nosso mini-projetinho com o comando:
-    -- cd ~/var/www/ && sudo git clone https://github.com/walesonn/crud_simples.git
+    -- cd /var/www/ && sudo git clone https://github.com/walesonn/crud_simples.git
 
 11. Bem parece que esquecemos de instalar o composer mas não tem problema, uma vez que o php ja esteje instalado basta apenas digitar o comando no seu terminal:
     -- sudo apt install composer -y
