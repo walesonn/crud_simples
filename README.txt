@@ -52,7 +52,7 @@ REQUISITOS:
 
 15 . Nossa ainda falta configurarmos mais uma coisa e dessa vez é no nosso servidor apache. Digite o seguinte comando:
     -- sudo nano /etc/apache2/sites-available/000-default.conf
-    Apos digitar este comando abrirá o arquivo copie as diretivas abaixo e cole dentro deste arquivo depois dê um ctrl + x e y para salvar.
+    Apos digitar este comando abrirá o arquivo, apage tudo dentro dele depois copie as diretivas abaixo e cole dentro deste arquivo depois dê um ctrl + x e y para salvar.
 
 <VirtualHost *:80>
 
