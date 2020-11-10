@@ -52,7 +52,7 @@ REQUISITOS:
 
 15 . Nossa ainda falta configurarmos mais uma coisa e dessa vez é no nosso servidor apache. Digite o seguinte comando:
     -- sudo nano /etc/apache2/sites-available/000-default.conf
-    Apos digitar este comando abrirá o arquivo, apage tudo dentro dele depois copie as diretivas abaixo e cole dentro deste arquivo depois dê um ctrl + x e y para salvar.
+    Apos digitar este comando abrirá o arquivo, apague tudo dentro dele depois copie as diretivas abaixo e cole dentro deste arquivo depois dê um ctrl + x e y para salvar.
 
 <VirtualHost *:80>
 
@@ -64,7 +64,7 @@ REQUISITOS:
 
 </VirtualHost>
 
-16. Agora reinicie o servidor apache2 para a configuração pasar a valer:
+16. Agora reinicie o servidor apache2 para a configuração passar a valer:
     -- sudo service apache2 restart
 
 17. Esquecemos de configurar nosso usuário que se conecta ao banco de dados então digite o comando para acessar a pasta e dentro dela coloque seu usuario e senha do banco de dados. No seu caso pode ser que este usuário seje root e a senha seje null ou seja sem senha, para fins de teste vamos usar este mesmo.
