@@ -19,7 +19,7 @@ REQUISITOS:
    --  sudo service apache2 status
 
 5. Agora vamos instalar o php7.4 mais antes vamos rodar o seguinte comando antes:
-   -- sudo add-apt-repository ppa:ondrej/php7
+   -- sudo add-apt-repository ppa:ondrej/php
    este comando ira adicionar o repositório onde ficará simples instalar o php na versão 7.4.
 
 6. Apos ter rodado o comando anterior atualize os pacotes novamente com o comando:
